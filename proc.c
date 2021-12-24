@@ -532,3 +532,15 @@ procdump(void)
     cprintf("\n");
   }
 }
+int
+myprint(char *buff, unsigned int size)
+{
+  if(size < 200)
+  {
+    return -1;
+  }
+  char temp[300] = "  _  _ ___  _ ___\n | \\| | _ \\/ ( _ )\n | .` |  _/| / _ \\\n |_|\\_|_|  |_\\___/\n";
+  strncpy( (char*)buff, temp, size);
+  return 200;
+}
+

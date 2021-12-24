@@ -89,3 +89,17 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+int
+sys_myprint(void)
+{
+  char* buff;
+  int size;
+  if( argint(1, &size) < 0){
+    return -1;
+  }
+  if( argptr(0, &buff, size) < 0){
+    return -1;
+  }
+  return myprint(buff, size);
+}
+

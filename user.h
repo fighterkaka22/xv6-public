@@ -23,7 +23,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
-
+int myprint(void* buff,unsigned int size);
 // ulib.c
 int stat(const char*, struct stat*);
 char* strcpy(char*, const char*);
