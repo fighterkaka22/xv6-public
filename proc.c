@@ -541,6 +541,6 @@ myprint(char *buff, unsigned int size)
   }
   char temp[300] = "  _  _ ___  _ ___\n | \\| | _ \\/ ( _ )\n | .` |  _/| / _ \\\n |_|\\_|_|  |_\\___/\n";
   strncpy( (char*)buff, temp, size);
-  return 200;
+  return strlen(temp);
 }
 
